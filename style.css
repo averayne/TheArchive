@@ -1,0 +1,10 @@
+#hero img {
+    height: 90vh;
+    object-fit: cover;
+}
+html {
+    scroll-behavior: smooth;
+}
+body {
+    padding-top: 70px;
+}

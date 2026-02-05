@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Hobby Title</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="style.css" rel="stylesheet">
+</head>
+
+<!--SpyScroll Component-->
+<body data-bs-spy="scroll" data-bs-target="#navbar" data-bs-offset="80" tabindex="0">
+
+  <!-- navigation -->
+
+  <nav id="navbar" class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+    <div class="container">
+      <a class="navbar-brand" href="#hero">Hobby</a>
+      <ul class="navbar-nav ms-auto flex-row">
+        <li class="nav-item mx-2">
+          <a class="nav-link" href="#hero">Home</a> 
+        </li>
+                <li class="nav-item mx-2">
+          <a class="nav-link" href="#section1">About</a>
+        </li>
+        <li class="nav-item mx-2">
+          <a class="nav-link" href="#section2">Gallery</a>
+        </li>
+
+        <!--Modal Component-->
+        <li class="nav-item mx-2">
+          <a class="nav-link" data-bs-toggle="modal" data-bs-target="#infoModal">
+            Contact
+          </a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <!--Carousel-->
+
+  <section id="hero">
+    <div id="heroCarousel" class="carousel slide carousel-fade" data-bs-ride="carousel" data-bs-interval="1500">
+      <div class="carousel-inner">
+
+      <div class="carousel-item active">
+        <!--need image-->
+        <img src="INSERT IMAGE HERE" class="d-block w-100" alt="Hero image number 1">
+      </div>
+
+      <div class="carousel-item">
+        <!--need image-->
+        <img src="INSERT IMAGE HERE" class="d-block w-100" alt="Hero image number 2">
+      </div> 
+      
+      <div class="carousel-item"> 
+        <!--need image-->
+        <img src="INSERT IMAGE HERE" class="d-block w-100" alt="Hero image number 3">
+      </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!--The about section-->
+  <section id="section1" class="py-5">
+    <div class="container">
+      <div class="row align-items-center">
+
+        <div class="col-md-6">
+          <h2>ABout my hobby</h2>
+          <p>
+            <!--Paragraph for the about me or my hobby section-->
+          </p>
+
+        </div>
+      </div>
+
+    <div class="col-md-6">
+      <!--IMAGE NEEDED-->
+      <img src="INSERT IMAGE HERE" class="img-fluid rounded" alt=""> 
+    </div>
+  </div>
+  </section>
+
+  <section id="section2" class="py-5 bg-light">
+    <div class="container">
+      <div class="row align-items-center flex-md-row-reverse">
+
+        <div class="col-md-6">
+          <h2>Gallery</h2>
+          <p>
+            INSERT PHOTO <!--PHOTO NEEEDED-->
+          </p>
+        </div>
+
+        <div class="col-md-6">
+          <!--IMAGE NEEDED-->
+          <img src="INSERT IMAGE" class="img-fluid rounded" alt=""> 
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!--CONTACT FORM-->
+  <section id="section3" class="py-5">
+    <div class="container">
+      <div class="row align-items-center">
+
+        <div class="col-md-6">
+          <h2>Contact</h2>
+          <p>
+            Reach out to me via <!--INSERT CONTACT INFO-->
+          </p>
+        </div>
+
+        <div class="col-md-6">
+          <!--IMAGE NEEDED-->
+          <img src="INSERT IMAGE" class="img-fluid rounded" alt=" "> 
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!--Image Accordion Component-->
+  <section id="faq" class="py-5 bg-light">
+    <div class="container d-flex justify-content-center">
+      <div class="col-md-8">
+        <h2 class="text-center mb-4">Gallery Highlights</h2>
+
+        <div class="accordion" id="imageAccordion">
+
+          <!--ITEM 1-->
+          <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#IMAGE_ONE" aria-expanded="true" aria-controls="IMAGE_ONE">
+                PHOTO #1
+              </button>
+            </h2>
+            <div id="IMAGE_ONE" class="accordion-collapse collapse show" data-bs-parent="#imageAccordion">
+              <div class="accordion-body text-center">
+                <!--IMAGE NEEDED-->
+                <img src="IMAGE NUMBER 1" class="img-fluid rounded mb-3 " alt="">
+              </div>
+            </div>
+          </div>
+          <!--ITEM NUMBER 2-->
+          <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#IMAGE_TWO" aria-expanded="false" aria-controls="IMAGE_TWO">
+                PHOTO # 2
+              </button>
+            </h2>
+            <div id="IMAGE_TWO" class="accordion-collapse collapse" data-bs-parent="#imageAccordion">
+              <div class="accordion-body text-center">
+                <!--INSERT IMAGE-->
+                <img src="INSERT IMAGE" class="img-fluid rounded mb-3" alt="">
+              </div>
+            </div>
+          </div>
+
+          <!--ITEM 3-->
+          <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#IMAGE_THREE" aria-expanded="false" aria-controls="IMAGE_THREE">
+                PHOTO # 3
+              </button>
+            </h2>
+            <div id="IMAGE_THREE" class="accordion-collapse collapse" data-bs-parent="#imageAccordion">
+              <div class="accordion-body text-center">
+                <!--INSERT IMAGE-->
+                <img src="INSERT IMAGE" class="img-fluid rounded mb-3" alt="">
+              </div>
+            </div>
+          </div>
+
+
+        </div>
+      </div>
+    </div>
+  </section>
+  <!--CONTACT MODAL-->
+  <div class="modal fade" id="infoModal" tabindex="-1">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+
+        <div class="modal-header">
+          <h5 class="modal-title">Contact Me</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body">
+          FILL IN CONTACT INFO 
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
