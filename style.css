@@ -1,10 +1,93 @@
-#hero img {
-    height: 90vh;
-    object-fit: cover;
-}
-html {
-    scroll-behavior: smooth;
+:root {
+  --nav-link: #000000da;
+  --text-main: #f1f1f1;
 }
 body {
-    padding-top: 70px;
+    font-family: 'Cinzel Decorative', serif;
 }
+
+/* Hero at very top, full viewport */
+#hero {
+  position: relative;
+  min-height: 100vh;
+}
+
+/* Centered oversized title under the nav */
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 80px; /* room for nav */
+  z-index: 2;
+  pointer-events: none;
+}
+
+.hero-title {
+  color: rgba(0, 0, 0, 0.685);
+  font-size: clamp(3rem, 7vw, 5.5rem);
+  font-weight: 800;
+  font-family: 'Cinzel Decorative', serif;
+  margin: 0;
+}
+
+.navbar .navbar-brand,
+.navbar .nav-link {
+  color: var(--nav-link);
+  font-weight: 700;
+  font-size: 1.25rem;
+}
+
+.navbar .nav-link:hover,
+.navbar .nav-link:focus {
+  color: #6e0000;
+}
+
+/* Carousel indicator dots: small + semi-transparent */
+.carousel-indicators {
+  bottom: 28px;
+  display: flex;
+  gap: 10px;
+}
+
+/* Image + overlay layout */
+.image-overlay {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+
+.content-box {
+  background: rgba(0, 0, 0, 0.82);
+  color: #f4e8d8;
+  padding: 1.75rem 2rem;
+}
+
+.overlay-box {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  padding: clamp(1rem, 4vw, 3rem);
+  max-width: min(90%, 960px);
+  margin: auto;
+}
+
+#imageAccordion .accordion-button {
+  background: #ffffff;
+  color: #000000;
+  font-weight: 700;
+  font-family: 'Cinzel Decorative', serif;
+  text-transform: uppercase;
+
+}
+
+/* Remove gaps so section images touch */
+#section1,
+#section2,
+#section3 {
+  padding: 0 !important;
+  margin: 0;
+}
+
